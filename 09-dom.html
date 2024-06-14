@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>D.O.M</title>
+	</head>
+	<body>
+		<button class="js-button">hello</button>
+		<button class="js-button-2">second hello</button>
+		<script>
+			console.log(document.querySelector('button').innerHTML);
+			console.log(document.querySelector('button')
+					.innerHTML = 'dog');
+			const buttonElement = document.querySelector('.js-button-2');
+			console.log(buttonElement);
+			
+			// document is an object with attribute body. body is thus an object as well and
+			// has attribute innerHTML
+			// document objects represents/models the webpage
+			/*
+			console.log(document.title);
+			document.title = 'Changed';
+			
+			console.log(document.body);
+			console.log(typeof document.body);
+			
+			console.log(document.body.innerHTML); // gives us all HTML inside of body
+			
+			document.body.innerHTML = '<button>Good Job!</button>';
+			console.log(document.body.innerHTML); // now our body only has a single button
+			*/
+			// querySelector() is a method of document object => lets us get any element
+			// from the webpage and put it inside Javascript
+			
+			/*
+			document.body.innerHTML = 'hello';
+			document.title = 'Good Job!';
+			*/
+		</script>
+	</body>
+</html>

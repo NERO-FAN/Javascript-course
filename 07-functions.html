@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Functions</title>
+	</head>
+	<body>
+		<script>
+			/*
+			function function1() {
+				console.log('hello');
+				console.log(2+2);
+			}
+			
+			function1();
+			*/
+			
+			// use of parameters
+			function calculateTax(cost, tax = 10){
+				console.log('$' + Math.round(cost * tax) / 100);
+			}
+			calculateTax(10, 8.25);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Objects Exercises</title>
+	</head>
+	<body>
+		<script>
+			product1 = {
+				name: 'Wilson Basketball',
+				price: 2095
+			};
+			console.log(product1);
+			
+			product1.price += 500;
+			console.log(product1);
+			
+			product1['delivery-time'] = '3 days';
+			console.log(product1);
+			
+			product2 = {
+				name: 'Spalding Basketball',
+				price: 1999
+			};
+			
+			function priceCompare(p1, p2) {
+				return p1.price > p2.price ? p2 : p1;
+			}
+			console.log(priceCompare(product1, product2));
+			
+			function isSameProduct(p1, p2){
+				if (p1.price === p2.price && p1.name === p2.name)
+					return true
+				else
+					return false;
+			}
+			console.log(isSameProduct(product1, product2));
+			
+			console.log(product1.name.toLowerCase());
+			console.log(product1.name.repeat(2));
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Advanced Functions</title>
+	</head>
+	<body>
+		<button onclick="
+		
+		" class="js-button">Click</button>
+		<script>
+			/*
+			const buttonElement = document.querySelector('.js-button');
+			
+			
+			// best practice to use Event Listeners instead of onClick attribute
+			const eventListener = () => {
+				console.log('clicked');
+			}
+			buttonElement.addEventListener('click', eventListener);
+			
+			buttonElement.removeEventListener('click', eventListener)
+			
+			buttonElement.addEventListener('click', () => {
+				console.log('clicked2');
+			});
+	
+			greeting(); // hoisting - we can call a function before we've defined it
+			function greeting(){
+				console.log('hello');
+			}
+			greeting();
+			
+			const num = 2
+			// anonymous function - function without a name
+			// can not perform hoisting here as we've assigned a function to a variable
+			const function1 = function(){
+				console.log('hello2');
+			};
+			console.log(function1);
+			console.log(typeof function1);
+			function1();
+			
+			const object1 = {
+				num: 2,
+				fun: function(){
+					console.log('hello3');
+				}
+			};
+			object1.fun(); // example of a method => function inside an object
+			
+			function display(param){
+				console.log(param);
+			}
+			display(2);
+			
+			function run(param){
+				param();
+			}
+			// passing a function into another function => callback function
+			run(function() {
+				console.log('hello4');
+			})
+	
+			// Asynchronous code - won't wait for the function to be called before running other lines
+			setTimeout(function(){
+				console.log('timeout');
+			}, 3000);
+			
+			// Synchronous code
+			console.log('next line');
+			
+			// Asynchronous code
+			setInterval(function(){
+				console.log('interval');
+			}, 3000);
+			
+			console.log('next line 2');
+			
+			// using an arrow function with forEach method is better than calling .forEach(function(value, index)) {...}
+			[
+					'make dinner',
+					'wash dishes',
+					'watch youtube'
+			].forEach((value, index) => {
+				if (value === 'wash dishes'){
+					return;
+				} // is basically the same as 'continue' keyword
+				console.log(index)
+				console.log(value); // print all values in array to the console
+			});
+			
+			const regularFunction = function(param){
+				console.log(param);
+				return 5;
+			}
+			
+			// arrow function
+			const arrowFunction = (param) => {
+				console.log(param);
+				return 5;
+			}
+			arrowFunction('hello');
+			
+			const oneParam = (param) => {
+				console.log(param + 1);
+			}
+			oneParam(2);
+			
+			// arrow function
+			const oneLine = () => 2+3;
+			console.log(oneLine());
+			
+			// preferrable to use second syntax rather than arrow function syntax in objects
+			const object2 = {
+				method: () => {
+				
+				},
+				method() {
+				
+				}
+			}
+			*/
+			// filter creates a new array depending on truth value of the function. Takes 2 parameters
+			console.log([1, -3, 5].filter((value, index) => {
+				return value >= 0;
+			}));
+			
+			// map creates a new array and whatever is returned will be added to array
+			console.log([1, 1, 3].map((value, index) => {
+				return value + 10; // adds 10 to each element and puts them in new array
+			}));
+			
+			// shortcut version
+			console.log([1, 1, 3].map(value => value += 10))
+		</script>
+	</body>
+</html>

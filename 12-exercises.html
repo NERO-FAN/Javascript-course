@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+	<body>
+		<script>
+			// Exercise 12m.
+			addNum = (array, num) => array.map(value => value += num);
+			console.log(addNum([1, 2, 3], 10));
+			
+			// Exercise 12n.
+			removeEgg = (array) => array.filter(value => value !== 'egg');
+			console.log(removeEgg(['i', 'love', 'egg']));
+			
+			// Exercise 12o.
+			removeEgg = (array, num) => {
+				return array.filter((value) => {
+					if (num > 0 && value === 'egg'){
+						num--;
+						return false;
+					}
+					else
+						return true;
+				});
+			}
+			console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham'], 2));
+			
+			// Exercise 12p
+		</script>
+	</body>
+</html>

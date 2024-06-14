@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Objects</title>
+	</head>
+	<body>
+		<script>
+			/*
+			const product = {
+				name: 'socks',
+				price: 1099
+			};
+			console.log(product);
+			console.log(product.name);
+			console.log(product.price);
+			
+			product.name = 'dogs';
+			console.log(product.name);
+			
+			product.newProperty = true; // add a new value to our object
+			console.log(product);
+			
+			delete product.newProperty; // delete a value from our object
+			console.log(product);
+			*/
+			/*
+			const product2 = {
+				name: 'shirt',
+				'delivery-time': '1 day',
+				rating: {
+					stars: 4.5,
+					count: 87
+				},
+				fun: function function1(){
+					console.log('function inside object');
+				}
+			};
+			console.log(product2)
+			console.log(product2.name); // dot notation
+			
+			// another way of accessing values of objects
+			console.log(product2['name']); // bracket notation
+			// console.log(product2.delivery-time); // javascript can't recognize named properties of objects like this one
+			console.log(product2['delivery-time']);
+			
+			// inside an object, we can save any types of values, such as nested objects and functions like we have above
+			// here's how we access nested objects
+			
+			console.log(product2.rating.stars);
+			product2.fun();
+			
+			console.log(typeof console); // console is an object
+			console.log(typeof console.log); // log is a function that is a part of the object console
+			
+			console.log(JSON.stringify(product2)); // this will convert our javascript object into a JSON object. Note: JSON does not support functions
+			const jsonString = JSON.stringify(product2)
+			console.log(JSON.parse(jsonString)); // this will convert JSON string back into javascript object
+			*/
+			
+			// java automatically wraps strings in an object => called autoboxing which is why we can use methods on strings
+			console.log('hello'.length); // return length of a string
+			console.log('hello'.toUpperCase()); // return upper case of entire string
+			
+			// object1 variable is a reference to the actual object which is somewhere in the computer's memory
+			const object1 = {
+				message: 'hello'
+			};
+			
+			const object2 = object1; // makes a copy of the reference of object1 => copy by reference
+			
+			object1.message = 'Good Job!';
+			console.log(object1); // const doesn't prevent us from changing the values of what object1 is referencing to
+			
+			console.log(object2); // notice that the message property of object2 was also changed from the lines above
+			
+			const object3 = {
+				message: 'Good Job!'
+			};
+			console.log(object3 === object1); // false => what is compared is the memory address and not the values inside the object
+			console.log(object3.message === object1.message) // true
+			
+			const object4 = {
+				message: 'Good Job!',
+				price: 799
+			};
+			
+			// destructuring property
+			// const message = object4.message; // can use a shortcut below
+			const {message, price} = object4;
+			console.log(message + ' ' + price);
+			
+			// shorthand property and method
+			const object5 = {
+				// message: message // can do the same with the line below
+				message,
+				/*method: function function1() { // this can be done using the lines below
+					console.log('method');
+				}*/
+				method() {
+					console.log('method')
+				}
+			};
+			console.log(object5);
+			object5.method();
+		</script>
+	</body>
+</html>

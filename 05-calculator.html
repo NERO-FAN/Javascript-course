@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Simple Calculator</title>
+	</head>
+	<body>
+		<p>
+			<!--
+				Note that eval() is not safe to use in real projects
+				It is okay here while we are learning though
+			-->
+			<button onclick="
+			calculation = '';
+			console.log(0);
+		">AC</button>
+			<button onclick="
+				calculation *= -1;
+				console.log(eval(calculation));
+				calculation = eval(calculation);
+			">+/-</button>
+			<button onclick="
+				calculation += ' / 100';
+				console.log(eval(calculation));
+				calculation = eval(calculation);
+			">%</button>
+			<button onclick="
+			console.log(calculation += ' / ');
+		">/</button>
+		</p>
+		<p>
+			<button onclick="
+			console.log(calculation += '7');
+		">7</button>
+			<button onclick="
+			console.log(calculation += '8');
+		">8</button>
+			<button onclick="
+			console.log(calculation += '9');
+		">9</button>
+			<button onclick="
+			console.log(calculation += ' * ');
+		">x</button>
+		</p>
+		<p>
+			<button onclick="
+			console.log(calculation += '4');
+		">4</button>
+			<button onclick="
+			console.log(calculation += '5');
+		">5</button>
+			<button onclick="
+			console.log(calculation += '6');
+		">6</button>
+			<button onclick="
+			console.log(calculation += ' - ');
+		">-</button>
+		</p>
+		<p>
+			<button onclick="
+			console.log(calculation += '1');
+		">1</button>
+			<button onclick="
+			console.log(calculation += '2');
+		">2</button>
+			<button onclick="
+			console.log(calculation += '3');
+		">3</button>
+			<button onclick="
+			console.log(calculation += ' + ');
+		">+</button>
+		</p>
+		<p>
+			<button onclick="
+			console.log(calculation += '0');
+		">0</button>
+			<button onclick="
+			console.log(calculation += '.');
+		">.</button>
+			<button onclick="
+			console.log(eval(calculation));
+			calculation = eval(calculation);
+		">=</button>
+		</p>
+		
+		<script>
+			let calculation = "";
+		</script>
+	</body>
+</html>
